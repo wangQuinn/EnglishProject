@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://qcuqigj55i6k"]
+
+[ext_resource type="Script" uid="uid://cx8spdhbpjymu" path="res://Main.gd" id="1_mp32j"]
+[ext_resource type="PackedScene" uid="uid://dywxm7ubp0pru" path="res://NPC.tscn" id="1_xhppf"]
+[ext_resource type="Script" uid="uid://dnt3stvgxwecu" path="res://Player.gd" id="2_5mqa0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_icwts"]
+specular_color = Color(0.494118, 0.537255, 0.556863, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_oecdn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cfipr"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mp32j")
+metadata/_edit_horizontal_guides_ = [1207.0]
+
+[node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.705882, 0.568627, 0.937255, 1)
+position = Vector2(537, 325)
+scale = Vector2(1339, 730)
+texture = SubResource("CanvasTexture_icwts")
+
+[node name="NPC" parent="." instance=ExtResource("1_xhppf")]
+position = Vector2(-2, 12)
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(567, 326)
+scale = Vector2(1339, 730)
+script = ExtResource("2_5mqa0")
+
+[node name="playerSprite" type="Sprite2D" parent="Player"]
+modulate = Color(0, 0.878431, 0.333333, 0.690196)
+position = Vector2(-0.270351, -0.0383562)
+scale = Vector2(0.125093, 0.332192)
+texture = SubResource("CanvasTexture_oecdn")
+
+[node name="Prompt" type="Sprite2D" parent="."]
+modulate = Color(0.709804, 0.317647, 0.0588235, 1)
+z_index = 1
+position = Vector2(392, 169)
+scale = Vector2(120.5, 139.5)
+texture = SubResource("CanvasTexture_cfipr")
