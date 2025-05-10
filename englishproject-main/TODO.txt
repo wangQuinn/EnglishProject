@@ -1,0 +1,5 @@
+Dialogue 
+
+- mark whether dialogue has been shown/do not repeat dialogue 
+- slide out 
+- ending dialogue
